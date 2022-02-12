@@ -1,5 +1,11 @@
 """Modularized command line tools made easy."""
 
+__version__ = "0.1.0"
+__license__ = "MIT"
+__author__  = "Florian Schrögendorfer"
+__email__   = "florian.schroegendorfer@jku.at"
+__url__     = "https://gitlab.sai.jku.at/phlo/pycli"
+
 import os
 import pkgutil
 import sys
