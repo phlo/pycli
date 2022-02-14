@@ -1,6 +1,6 @@
 """Modularized command line tools made easy."""
 
-__version__ = "0.1.0"
+__version__ = "0.1"
 __license__ = "MIT"
 __author__  = "Florian Schrögendorfer"
 __email__   = "florian.schroegendorfer@jku.at"
@@ -27,12 +27,12 @@ def run (path: str, main: str = "main"):
     try:
         return getattr(module, main)()
     except AttributeError as e:
-        print(f"usage: {cmd} <command> [<args>]\n\n{module.__doc__}\n")
+        print(f"usage: {cmd} <command> [<args>]\n\n{module.__doc__.strip()}\n")
         print("available commands:")
         cmds = []
         for m in pkgutil.iter_modules(module.__path__):
             doc = pkgutil.resolve_name(path + f".{m.name}").__doc__
-            if doc: doc = doc.split('\n', 1)[0]
+            if doc: doc = doc.strip().split('\n', 1)[0]
             cmds.append((m.name, doc))
         spacing = 4
         width = (max([len(x[0]) for x in cmds]) + spacing + 1) // 2 * 2

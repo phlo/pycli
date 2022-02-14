@@ -1,1 +1,5 @@
-"""Some package."""
+"""
+Some package.
+
+Some detailed description.
+"""

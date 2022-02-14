@@ -1,3 +1,3 @@
 .PHONY: test
 test:
-	python -B -m unittest -b
+	python3 -B -m unittest -b
