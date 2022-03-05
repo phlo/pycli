@@ -4,7 +4,7 @@ __version__ = "0.1"
 __license__ = "MIT"
 __author__  = "Florian Schrögendorfer"
 __email__   = "florian.schroegendorfer@jku.at"
-__url__     = "https://gitlab.sai.jku.at/phlo/pycli"
+__url__     = "https://github.com/phlo/remerge"
 
 import os
 import pkgutil
